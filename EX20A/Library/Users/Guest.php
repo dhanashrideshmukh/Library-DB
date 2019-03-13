@@ -18,9 +18,14 @@ namespace Library\Users;
                 return "Welcome, $this->first_name" . " " . $this->last_name . "\n";
             }
             
-//      ****** NEEDS RESTRICTIONS
             function view($list) {
-                return $list;
+                if ($list == "Author" || "Author_Book_Intemediary" || "Book" || "Category" ) {
+                    for ($i = 0; $i < count($list); $i++){
+                        return $list[$i]; 
+                    }   
+                }else {
+                    return ("Access denied");
+                     }  
             }
             
             function search($list, $item){

@@ -7,9 +7,11 @@ class Librarian extends Member {
         private $emp_id;
         private $position; 
         
-        function viewAll($list) {
-                return $list;
-            }
+        function view($list) {
+            for ($i = 0; $i < count($list); $i++){
+                return $list[$i]; 
+            }   
+        }
     
         function updateAll($item,$updatedItem) {
               if (empty($updatedItem)){
