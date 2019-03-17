@@ -4,7 +4,7 @@ namespace Library\Users;
 
 class Librarian extends Member {
     
-        private $emp_id;
+        private $emp_id; // Employee ID
         private $position; 
         
         function view($list) {
